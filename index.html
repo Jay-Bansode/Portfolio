@@ -1,333 +1,451 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jaykumar Bansode</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-  </head>
-  <body>
-    <!-- Animated background -->
-    <div class="bg-grid"></div>
-    <div class="bg-glow glow-1"></div>
-    <div class="bg-glow glow-2"></div>
 
-    <!-- Custom cursor -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jaykumar Bansode</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+</head>
 
-    <!-- Progress bar -->
-    <div class="scroll-progress"></div>
+<body>
+  <!-- Animated background -->
+  <div class="bg-grid"></div>
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
 
-    <nav id="desktop-nav">
-      <div class="logo">
-        <span class="logo-bracket">&lt;</span>JB<span class="logo-bracket">/&gt;</span>
+  <!-- Custom cursor -->
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <!-- Progress bar -->
+  <div class="scroll-progress"></div>
+
+  <nav id="desktop-nav">
+    <div class="logo">
+      <span class="logo-bracket">&lt;</span>JB<span class="logo-bracket">/&gt;</span>
+    </div>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle-btn" id="themeToggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <span class="toggle-pill">
+          <span class="pill-icon sun-icon">
+            <!-- Sun -->
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round">
+              <circle cx="12" cy="12" r="5" />
+              <line x1="12" y1="2" x2="12" y2="4" />
+              <line x1="12" y1="20" x2="12" y2="22" />
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+              <line x1="2" y1="12" x2="4" y2="12" />
+              <line x1="20" y1="12" x2="22" y2="12" />
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </svg>
+          </span>
+          <span class="pill-thumb"></span>
+          <span class="pill-icon moon-icon">
+            <!-- Moon -->
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+          </span>
+        </span>
+      </button>
+    </div>
+  </nav>
+
+  <nav id="hamburger-nav">
+    <div class="logo">
+      <span class="logo-bracket">&lt;</span>JB<span class="logo-bracket">/&gt;</span>
+    </div>
+    <div class="nav-right">
+      <button class="theme-toggle-btn" id="themeToggleMobile" onclick="toggleTheme()" aria-label="Toggle theme">
+        <span class="toggle-pill">
+          <span class="pill-icon sun-icon">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round">
+              <circle cx="12" cy="12" r="5" />
+              <line x1="12" y1="2" x2="12" y2="4" />
+              <line x1="12" y1="20" x2="12" y2="22" />
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+              <line x1="2" y1="12" x2="4" y2="12" />
+              <line x1="20" y1="12" x2="22" y2="12" />
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </svg>
+          </span>
+          <span class="pill-thumb"></span>
+          <span class="pill-icon moon-icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+          </span>
+        </span>
+      </button>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
       </div>
-      <div class="nav-right">
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="profile">
+    <div class="hero-left">
+      <div class="hero-badge reveal-up" style="--delay:0s">Available for work ✦</div>
+      <p class="section__text__p1 reveal-up" style="--delay:0.1s">Hello, I'm</p>
+      <h1 class="title reveal-up" style="--delay:0.2s">
+        <span class="name-line">Jaykumar</span>
+        <span class="name-line accent-text">Bansode</span>
+      </h1>
+      <p class="section__text__p2 reveal-up" style="--delay:0.3s">
+        <span class="typing-text"></span><span class="cursor-blink">|</span>
+      </p>
+      <div class="btn-container reveal-up" style="--delay:0.4s">
+        <button class="btn btn-primary" onclick="window.open('./assets/Jaykumar-Bansode-resume.pdf')">
+          <span>Download CV</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M8 1v9M4 7l4 4 4-4M2 14h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </button>
+        <button class="btn btn-outline" onclick="location.href='#contact'">
+          <span>Contact Info</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M2 4l6 5 6-5M2 4h12v9H2V4z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+      <div id="socials-container" class="reveal-up" style="--delay:0.5s">
+        <a class="social-link" href="https://www.linkedin.com/in/jaykbansode/" target="_blank" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+          </svg>
+        </a>
+        <a class="social-link" href="https://github.com/Jay-Bansode" target="_blank" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+            <path
+              d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero-right reveal-scale" style="--delay:0.3s">
+      <div class="profile-ring"></div>
+      <div class="profile-ring ring-2"></div>
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.png" alt="Jaykumar Bansode" />
+      </div>
+      <div class="floating-badge badge-1">
+        <i class="devicon-react-original colored"></i>
+        <span>React</span>
+      </div>
+      <div class="floating-badge badge-2">
+        <i class="devicon-nodejs-plain colored"></i>
+        <span>Node.js</span>
+      </div>
+      <div class="floating-badge badge-3">
+        <i class="devicon-mongodb-plain colored"></i>
+        <span>MongoDB</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <div class="section-header reveal-up">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About <span class="accent-text">Me</span></h1>
+    </div>
+    <div class="about-details-container">
+      <div class="about-containers reveal-up" style="--delay:0.1s">
+        <div class="details-container">
+          <div class="detail-icon">🎓</div>
+          <h3>Education</h3>
+          <p>B.E in Computer Science</p>
+        </div>
+        <div class="details-container">
+          <div class="detail-icon">💼</div>
+          <h3>Focus</h3>
+          <p>Full Stack Development</p>
+        </div>
+        <div class="details-container">
+          <div class="detail-icon">🚀</div>
+          <h3>Projects</h3>
+          <p>4+ Completed</p>
+        </div>
+      </div>
+      <div class="text-container reveal-up" style="--delay:0.2s">
+        <p>
+          I don't just write code — I <strong>architect experiences</strong>. From pixel-perfect UIs that make users go
+          <em>"whoa"</em> to backend systems that laugh at scale, I build things that <strong>actually work</strong>.
+          Armed with the full MERN stack and a caffeine addiction, I turn wild ideas into live products — fast. If it
+          lives on the web, I can build it, break it, and make it better. Let's create something the internet hasn't
+          seen yet. 🔥
+        </p>
+      </div>
+    </div>
+    <div class="section-arrow" onclick="location.href='#experience'">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section id="experience">
+    <div class="section-header reveal-up">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Tech <span class="accent-text">Stack</span></h1>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card reveal-up" style="--delay:0s"><i
+          class="devicon-html5-plain colored skill-icon"></i><span>HTML</span></div>
+      <div class="skill-card reveal-up" style="--delay:0.05s"><i
+          class="devicon-css3-plain colored skill-icon"></i><span>CSS</span></div>
+      <div class="skill-card reveal-up" style="--delay:0.1s"><i
+          class="devicon-javascript-plain colored skill-icon"></i><span>JavaScript</span></div>
+      <div class="skill-card reveal-up" style="--delay:0.15s"><i
+          class="devicon-react-original colored skill-icon"></i><span>React JS</span></div>
+      <div class="skill-card reveal-up" style="--delay:0.2s"><i
+          class="devicon-redux-original colored skill-icon"></i><span>Redux</span></div>
+      <div class="skill-card reveal-up" style="--delay:0.25s"><i
+          class="devicon-nodejs-plain colored skill-icon"></i><span>Node JS</span></div>
+      <div class="skill-card reveal-up" style="--delay:0.3s"><i
+          class="devicon-express-original skill-icon express-icon"></i><span>Express JS</span></div>
+      <div class="skill-card reveal-up" style="--delay:0.35s"><i
+          class="devicon-mongodb-plain colored skill-icon"></i><span>MongoDB</span></div>
+      <div class="skill-card reveal-up" style="--delay:0.4s"><i
+          class="devicon-chakraui-plain colored skill-icon"></i><span>Chakra UI</span></div>
+      <div class="skill-card reveal-up" style="--delay:0.45s"><i
+          class="devicon-mysql-plain colored skill-icon"></i><span>MySQL</span></div>
+      <div class="skill-card reveal-up" style="--delay:0.5s"><i
+          class="devicon-azuresqldatabase-plain colored skill-icon"></i><span>NoSQL</span></div>
+      <div class="skill-card reveal-up" style="--delay:0.55s"><i
+          class="devicon-git-plain colored skill-icon"></i><span>Git</span></div>
+      <div class="skill-card reveal-up" style="--delay:0.6s"><i
+          class="devicon-materialui-plain colored skill-icon"></i><span>Material UI</span></div>
+    </div>
+    <div class="section-arrow" onclick="location.href='#projects'">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects">
+    <div class="section-header reveal-up">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Featured <span class="accent-text">Projects</span></h1>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card reveal-up" style="--delay:0s">
+        <div class="project-img-wrap">
+          <img src="./assets/project-1.png" alt="E-commerce Website" class="project-img" />
+          <div class="project-overlay">
+            <span>E-Commerce</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h2 class="project-title">E-commerce Website</h2>
+          <p class="project-desc">Full-featured online store with cart, auth, and payment integration.</p>
+          <div class="btn-container">
+            <button class="btn btn-sm" onclick="location.href='https://gitlab.com/jay2964929/rststore'">GitLab</button>
+            <button class="btn btn-sm btn-filled" onclick="location.href='http://192.46.212.135/'">Live Demo ↗</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal-up" style="--delay:0.1s">
+        <div class="project-img-wrap">
+          <img src="./assets/TV-MAZE.png" alt="TV MAZE" class="project-img" />
+          <div class="project-overlay"><span>Entertainment</span></div>
+        </div>
+        <div class="project-info">
+          <h2 class="project-title">TV MAZE</h2>
+          <p class="project-desc">TV show search & discovery app powered by the TVMaze API.</p>
+          <div class="btn-container">
+            <button class="btn btn-sm" onclick="location.href='https://github.com/Jay-Bansode/TVMazee'">GitHub</button>
+            <button class="btn btn-sm btn-filled" onclick="location.href='https://tvmazee.vercel.app/'">Live Demo
+              ↗</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal-up" style="--delay:0.2s">
+        <div class="project-img-wrap">
+          <img src="./assets/Number-Base-Converter.png" alt="Number Base Converter" class="project-img" />
+          <div class="project-overlay"><span>Tool</span></div>
+        </div>
+        <div class="project-info">
+          <h2 class="project-title">Number Base Converter</h2>
+          <p class="project-desc">Convert numbers between binary, octal, decimal, and hex systems.</p>
+          <div class="btn-container">
+            <button class="btn btn-sm"
+              onclick="location.href='https://github.com/Jay-Bansode/Number-Base-Converter'">GitHub</button>
+            <button class="btn btn-sm btn-filled"
+              onclick="location.href='https://numbersystemconvertor.netlify.app/'">Live Demo ↗</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal-up" style="--delay:0.3s">
+        <div class="project-img-wrap">
+          <img src="./assets/Seven-Sisters.png" alt="Seven Sisters" class="project-img" />
+          <div class="project-overlay"><span>Visual</span></div>
+        </div>
+        <div class="project-info">
+          <h2 class="project-title">Seven Sisters</h2>
+          <p class="project-desc">Stunning parallax scrolling website showcasing the Seven Sisters landscape.</p>
+          <div class="btn-container">
+            <button class="btn btn-sm"
+              onclick="location.href='https://github.com/Jay-Bansode/Parallax-Website-Seven-Sisters'">GitHub</button>
+            <button class="btn btn-sm btn-filled" onclick="location.href='https://sevensisters.netlify.app/'">Live Demo
+              ↗</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- New Projects -->
+      <div class="project-card reveal-up" style="--delay:0.4s">
+        <div class="project-img-wrap">
+          <img src="./assets/NumCraft.png" alt="NumCraft" class="project-img" />
+          <div class="project-overlay"><span>Tool</span></div>
+        </div>
+        <div class="project-info">
+          <h2 class="project-title">NumCraft (Calculator Pro)</h2>
+          <p class="project-desc">A sleek, modern web-based calculator featuring a premium glassmorphism UI design.</p>
+          <div class="btn-container">
+            <button class="btn btn-sm"
+              onclick="location.href='https://github.com/Jay-Bansode/Calulator'">GitHub</button>
+            <button class="btn btn-sm btn-filled" onclick="location.href='https://numcraft.netlify.app/'">Live Demo
+              ↗</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal-up" style="--delay:0.5s">
+        <div class="project-img-wrap">
+          <img src="./assets/LinkSnap.png" alt="LinkSnap" class="project-img" />
+          <div class="project-overlay"><span>Tool</span></div>
+        </div>
+        <div class="project-info">
+          <h2 class="project-title">LinkSnap</h2>
+          <p class="project-desc">A fast, free, and reliable URL shortener that allows users to shorten links in one
+            click.</p>
+          <div class="btn-container">
+            <button class="btn btn-sm"
+              onclick="location.href='https://github.com/Jay-Bansode/CodeClauseInternship_URL-Shortner'">GitHub</button>
+            <button class="btn btn-sm btn-filled" onclick="location.href='https://linksnap-app.vercel.app/'">Live Demo
+              ↗</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal-up" style="--delay:0.6s">
+        <div class="project-img-wrap">
+          <img src="./assets/Advice-Generator.png" alt="Advice Generator" class="project-img" />
+          <div class="project-overlay"><span>Entertainment</span></div>
+        </div>
+        <div class="project-info">
+          <h2 class="project-title">Advice Generator</h2>
+          <p class="project-desc">A sleek, interactive web application that fetches random pieces of advice from the
+            Advice Slip API.</p>
+          <div class="btn-container">
+            <button class="btn btn-sm"
+              onclick="location.href='https://github.com/Jay-Bansode/Advice-Generator'">GitHub</button>
+            <button class="btn btn-sm btn-filled" onclick="location.href='https://advicegeneratorss.netlify.app/'">Live
+              Demo ↗</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-arrow" onclick="location.href='#contact'">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <div class="section-header reveal-up">
+      <p class="section__text__p1">Let's Work Together</p>
+      <h1 class="title">Get In <span class="accent-text">Touch</span></h1>
+    </div>
+    <div class="contact-wrapper reveal-up" style="--delay:0.1s">
+      <a class="contact-card" href="mailto:bansodejay50@gmail.com">
+        <div class="contact-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="24" height="24">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke-width="1.5" />
+            <polyline points="22,6 12,13 2,6" stroke-width="1.5" />
+          </svg>
+        </div>
+        <div>
+          <h3>Email</h3>
+          <p>bansodejay50@gmail.com</p>
+        </div>
+        <span class="contact-arrow">↗</span>
+      </a>
+      <a class="contact-card" href="https://www.linkedin.com/in/jaykbansode/" target="_blank">
+        <div class="contact-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452z" />
+          </svg>
+        </div>
+        <div>
+          <h3>LinkedIn</h3>
+          <p>jaykbansode</p>
+        </div>
+        <span class="contact-arrow">↗</span>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <nav>
+      <div class="nav-links-container">
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <button class="theme-toggle-btn" id="themeToggle" onclick="toggleTheme()" aria-label="Toggle theme">
-          <span class="toggle-pill">
-            <span class="pill-icon sun-icon">
-              <!-- Sun -->
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
-                <circle cx="12" cy="12" r="5"/>
-                <line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/>
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-                <line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/>
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-              </svg>
-            </span>
-            <span class="pill-thumb"></span>
-            <span class="pill-icon moon-icon">
-              <!-- Moon -->
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-            </span>
-          </span>
-        </button>
       </div>
     </nav>
+    <p class="footer-copy">Copyright &#169; 2024 Jaykumar Bansode. Crafted with ❤️</p>
+  </footer>
 
-    <nav id="hamburger-nav">
-      <div class="logo">
-        <span class="logo-bracket">&lt;</span>JB<span class="logo-bracket">/&gt;</span>
-      </div>
-      <div class="nav-right">
-        <button class="theme-toggle-btn" id="themeToggleMobile" onclick="toggleTheme()" aria-label="Toggle theme">
-          <span class="toggle-pill">
-            <span class="pill-icon sun-icon">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
-                <circle cx="12" cy="12" r="5"/>
-                <line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/>
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-                <line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/>
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-              </svg>
-            </span>
-            <span class="pill-thumb"></span>
-            <span class="pill-icon moon-icon">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-            </span>
-          </span>
-        </button>
-        <div class="hamburger-menu">
-          <div class="hamburger-icon" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div class="menu-links">
-            <li><a href="#about" onclick="toggleMenu()">About</a></li>
-            <li><a href="#experience" onclick="toggleMenu()">Skills</a></li>
-            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-          </div>
-        </div>
-      </div>
-    </nav>
+  <script src="script.js"></script>
+</body>
 
-    <!-- HERO SECTION -->
-    <section id="profile">
-      <div class="hero-left">
-        <div class="hero-badge reveal-up" style="--delay:0s">Available for work ✦</div>
-        <p class="section__text__p1 reveal-up" style="--delay:0.1s">Hello, I'm</p>
-        <h1 class="title reveal-up" style="--delay:0.2s">
-          <span class="name-line">Jaykumar</span>
-          <span class="name-line accent-text">Bansode</span>
-        </h1>
-        <p class="section__text__p2 reveal-up" style="--delay:0.3s">
-          <span class="typing-text"></span><span class="cursor-blink">|</span>
-        </p>
-        <div class="btn-container reveal-up" style="--delay:0.4s">
-          <button class="btn btn-primary" onclick="window.open('./assets/Jaykumar-Bansode-resume.pdf')">
-            <span>Download CV</span>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1v9M4 7l4 4 4-4M2 14h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </button>
-          <button class="btn btn-outline" onclick="location.href='#contact'">
-            <span>Contact Info</span>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4l6 5 6-5M2 4h12v9H2V4z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-        </div>
-        <div id="socials-container" class="reveal-up" style="--delay:0.5s">
-          <a class="social-link" href="https://www.linkedin.com/in/jaykbansode/" target="_blank" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          </a>
-          <a class="social-link" href="https://github.com/Jay-Bansode" target="_blank" aria-label="GitHub">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-          </a>
-        </div>
-      </div>
-      <div class="hero-right reveal-scale" style="--delay:0.3s">
-        <div class="profile-ring"></div>
-        <div class="profile-ring ring-2"></div>
-        <div class="section__pic-container">
-          <img src="./assets/profile-pic.png" alt="Jaykumar Bansode" />
-        </div>
-        <div class="floating-badge badge-1">
-          <i class="devicon-react-original colored"></i>
-          <span>React</span>
-        </div>
-        <div class="floating-badge badge-2">
-          <i class="devicon-nodejs-plain colored"></i>
-          <span>Node.js</span>
-        </div>
-        <div class="floating-badge badge-3">
-          <i class="devicon-mongodb-plain colored"></i>
-          <span>MongoDB</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section id="about">
-      <div class="section-header reveal-up">
-        <p class="section__text__p1">Get To Know More</p>
-        <h1 class="title">About <span class="accent-text">Me</span></h1>
-      </div>
-      <div class="about-details-container">
-        <div class="about-containers reveal-up" style="--delay:0.1s">
-          <div class="details-container">
-            <div class="detail-icon">🎓</div>
-            <h3>Education</h3>
-            <p>B.E in Computer Science</p>
-          </div>
-          <div class="details-container">
-            <div class="detail-icon">💼</div>
-            <h3>Focus</h3>
-            <p>Full Stack Development</p>
-          </div>
-          <div class="details-container">
-            <div class="detail-icon">🚀</div>
-            <h3>Projects</h3>
-            <p>4+ Completed</p>
-          </div>
-        </div>
-        <div class="text-container reveal-up" style="--delay:0.2s">
-          <p>
-            I don't just write code — I <strong>architect experiences</strong>. From pixel-perfect UIs that make users go <em>"whoa"</em> to backend systems that laugh at scale, I build things that <strong>actually work</strong>. Armed with the full MERN stack and a caffeine addiction, I turn wild ideas into live products — fast. If it lives on the web, I can build it, break it, and make it better. Let's create something the internet hasn't seen yet. 🔥
-          </p>
-        </div>
-      </div>
-      <div class="section-arrow" onclick="location.href='#experience'">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-      </div>
-    </section>
-
-    <!-- SKILLS SECTION -->
-    <section id="experience">
-      <div class="section-header reveal-up">
-        <p class="section__text__p1">Explore My</p>
-        <h1 class="title">Tech <span class="accent-text">Stack</span></h1>
-      </div>
-      <div class="skills-grid">
-        <div class="skill-card reveal-up" style="--delay:0s"><i class="devicon-html5-plain colored skill-icon"></i><span>HTML</span></div>
-        <div class="skill-card reveal-up" style="--delay:0.05s"><i class="devicon-css3-plain colored skill-icon"></i><span>CSS</span></div>
-        <div class="skill-card reveal-up" style="--delay:0.1s"><i class="devicon-javascript-plain colored skill-icon"></i><span>JavaScript</span></div>
-        <div class="skill-card reveal-up" style="--delay:0.15s"><i class="devicon-react-original colored skill-icon"></i><span>React JS</span></div>
-        <div class="skill-card reveal-up" style="--delay:0.2s"><i class="devicon-redux-original colored skill-icon"></i><span>Redux</span></div>
-        <div class="skill-card reveal-up" style="--delay:0.25s"><i class="devicon-nodejs-plain colored skill-icon"></i><span>Node JS</span></div>
-        <div class="skill-card reveal-up" style="--delay:0.3s"><i class="devicon-express-original skill-icon express-icon"></i><span>Express JS</span></div>
-        <div class="skill-card reveal-up" style="--delay:0.35s"><i class="devicon-mongodb-plain colored skill-icon"></i><span>MongoDB</span></div>
-        <div class="skill-card reveal-up" style="--delay:0.4s"><i class="devicon-chakraui-plain colored skill-icon"></i><span>Chakra UI</span></div>
-        <div class="skill-card reveal-up" style="--delay:0.45s"><i class="devicon-mysql-plain colored skill-icon"></i><span>MySQL</span></div>
-        <div class="skill-card reveal-up" style="--delay:0.5s"><i class="devicon-azuresqldatabase-plain colored skill-icon"></i><span>NoSQL</span></div>
-        <div class="skill-card reveal-up" style="--delay:0.55s"><i class="devicon-git-plain colored skill-icon"></i><span>Git</span></div>
-        <div class="skill-card reveal-up" style="--delay:0.6s"><i class="devicon-materialui-plain colored skill-icon"></i><span>Material UI</span></div>
-      </div>
-      <div class="section-arrow" onclick="location.href='#projects'">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-      </div>
-    </section>
-
-    <!-- PROJECTS SECTION -->
-    <section id="projects">
-      <div class="section-header reveal-up">
-        <p class="section__text__p1">Browse My Recent</p>
-        <h1 class="title">Featured <span class="accent-text">Projects</span></h1>
-      </div>
-      <div class="projects-grid">
-        <div class="project-card reveal-up" style="--delay:0s">
-          <div class="project-img-wrap">
-            <img src="./assets/project-1.png" alt="E-commerce Website" class="project-img" />
-            <div class="project-overlay">
-              <span>E-Commerce</span>
-            </div>
-          </div>
-          <div class="project-info">
-            <h2 class="project-title">E-commerce Website</h2>
-            <p class="project-desc">Full-featured online store with cart, auth, and payment integration.</p>
-            <div class="btn-container">
-              <button class="btn btn-sm" onclick="location.href='https://gitlab.com/jay2964929/rststore'">GitLab</button>
-              <button class="btn btn-sm btn-filled" onclick="location.href='http://192.46.212.135/'">Live Demo ↗</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card reveal-up" style="--delay:0.1s">
-          <div class="project-img-wrap">
-            <img src="./assets/TV-MAZE.png" alt="TV MAZE" class="project-img" />
-            <div class="project-overlay"><span>Entertainment</span></div>
-          </div>
-          <div class="project-info">
-            <h2 class="project-title">TV MAZE</h2>
-            <p class="project-desc">TV show search & discovery app powered by the TVMaze API.</p>
-            <div class="btn-container">
-              <button class="btn btn-sm" onclick="location.href='https://github.com/Jay-Bansode/TVMazee'">GitHub</button>
-              <button class="btn btn-sm btn-filled" onclick="location.href='https://tvmazee.vercel.app/'">Live Demo ↗</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card reveal-up" style="--delay:0.2s">
-          <div class="project-img-wrap">
-            <img src="./assets/Number-Base-Converter.png" alt="Number Base Converter" class="project-img" />
-            <div class="project-overlay"><span>Tool</span></div>
-          </div>
-          <div class="project-info">
-            <h2 class="project-title">Number Base Converter</h2>
-            <p class="project-desc">Convert numbers between binary, octal, decimal, and hex systems.</p>
-            <div class="btn-container">
-              <button class="btn btn-sm" onclick="location.href='https://github.com/Jay-Bansode/Number-Base-Converter'">GitHub</button>
-              <button class="btn btn-sm btn-filled" onclick="location.href='https://numbersystemconvertor.netlify.app/'">Live Demo ↗</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card reveal-up" style="--delay:0.3s">
-          <div class="project-img-wrap">
-            <img src="./assets/Seven-Sisters.png" alt="Seven Sisters" class="project-img" />
-            <div class="project-overlay"><span>Visual</span></div>
-          </div>
-          <div class="project-info">
-            <h2 class="project-title">Seven Sisters</h2>
-            <p class="project-desc">Stunning parallax scrolling website showcasing the Seven Sisters landscape.</p>
-            <div class="btn-container">
-              <button class="btn btn-sm" onclick="location.href='https://github.com/Jay-Bansode/Parallax-Website-Seven-Sisters'">GitHub</button>
-              <button class="btn btn-sm btn-filled" onclick="location.href='https://sevensisters.netlify.app/'">Live Demo ↗</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="section-arrow" onclick="location.href='#contact'">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-      </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section id="contact">
-      <div class="section-header reveal-up">
-        <p class="section__text__p1">Let's Work Together</p>
-        <h1 class="title">Get In <span class="accent-text">Touch</span></h1>
-      </div>
-      <div class="contact-wrapper reveal-up" style="--delay:0.1s">
-        <a class="contact-card" href="mailto:bansodejay50@gmail.com">
-          <div class="contact-icon-wrap">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="24" height="24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke-width="1.5"/><polyline points="22,6 12,13 2,6" stroke-width="1.5"/></svg>
-          </div>
-          <div>
-            <h3>Email</h3>
-            <p>bansodejay50@gmail.com</p>
-          </div>
-          <span class="contact-arrow">↗</span>
-        </a>
-        <a class="contact-card" href="https://www.linkedin.com/in/jaykbansode/" target="_blank">
-          <div class="contact-icon-wrap">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/></svg>
-          </div>
-          <div>
-            <h3>LinkedIn</h3>
-            <p>jaykbansode</p>
-          </div>
-          <span class="contact-arrow">↗</span>
-        </a>
-      </div>
-    </section>
-
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p class="footer-copy">Copyright &#169; 2024 Jaykumar Bansode. Crafted with ❤️</p>
-    </footer>
-
-    <script src="script.js"></script>
-  </body>
 </html>
